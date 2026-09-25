@@ -1,0 +1,102 @@
+[
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "success",
+        "timestamp": "2026-09-24 23:40:34",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "failure",
+        "timestamp": "2026-09-24 23:40:34",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "success",
+        "timestamp": "2026-09-24 23:43:26",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "failure",
+        "timestamp": "2026-09-24 23:43:26",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "success",
+        "timestamp": "2026-09-24 23:45:48",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "failure",
+        "timestamp": "2026-09-24 23:45:48",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "success",
+        "timestamp": "2026-09-24 23:45:59",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "failure",
+        "timestamp": "2026-09-24 23:45:59",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "success",
+        "timestamp": "2026-09-24 23:48:46",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "failure",
+        "timestamp": "2026-09-24 23:48:46",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    }
+]
