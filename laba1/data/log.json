@@ -98,5 +98,45 @@
             "admin_user"
         ],
         "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "success",
+        "timestamp": "2026-09-25 19:04:35",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "failure",
+        "timestamp": "2026-09-25 19:04:35",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "success",
+        "timestamp": "2026-09-28 18:02:17",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin_user",
+        "result": "failure",
+        "timestamp": "2026-09-28 18:02:17",
+        "args": [
+            "admin_user"
+        ],
+        "kwargs": {}
     }
 ]

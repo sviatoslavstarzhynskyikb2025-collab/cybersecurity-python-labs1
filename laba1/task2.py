@@ -71,19 +71,21 @@ def run_task2():
         print(f"таблиця дозволів для: {username}")
 
         for res_name, req_clearance in resources:
-            # перевірка 1: користувач у списку заблокованих
-            if username in blocked_users:
+            if (
+                username in blocked_users
+            ):  # перевірка 1: користувач у списку заблокованих
                 print(f"user={username} resource={res_name} -> DENY (User is blocked)")
-            # перевірка 2: обліковий запис неактивний
-            elif not user_info["active"]:
+
+            elif not user_info["active"]:  # перевірка 2: обліковий запис неактивний
                 print(f"user={username} resource={res_name} -> DENY (Account inactive)")
-            # перевірка 3: числовий рівень доступу достатній
-            elif user_info["clearance"] >= req_clearance:
+
+            elif (
+                user_info["clearance"] >= req_clearance
+            ):  # перевірка 3: числовий рівень доступу достатній
                 print(f"user={username} resource={res_name} -> ALLOW")
 
-            # перевірка 4: рівень доступу замалий
             else:
-                print(
+                print(  # перевірка 4: рівень доступу замалий
                     f"user={username} resource={res_name} -> DENY (Insufficient clearance)"
                 )
 

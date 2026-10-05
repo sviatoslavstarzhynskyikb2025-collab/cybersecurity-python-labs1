@@ -1,0 +1,5 @@
+Timestamp,UserID,Action,Resource,IP
+2026-10-04 02:14:03,j_smith,GET,Confidential_HR_DB,192.168.1.50
+2026-10-04 09:12:00,admin,UPDATE,Main_Config,192.168.1.1
+2026-10-04 03:45:12,m_taylor,ACCESS,Finance_Server_NAS,192.168.1.110
+2026-10-04 10:01:05,olga_k,LOGIN,Portal,192.168.1.15

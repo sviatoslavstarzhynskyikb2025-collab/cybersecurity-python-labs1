@@ -1,0 +1,34 @@
+[
+    {
+        "UserID": "j_smith",
+        "Action": "GET",
+        "Resource": "Confidential_HR_DB",
+        "Timestamp": "2026-10-04 02:14:03",
+        "IP": "192.168.1.50",
+        "Reason": "After-hours activity"
+    },
+    {
+        "UserID": "admin",
+        "Action": "UPDATE",
+        "Resource": "Main_Config",
+        "Timestamp": "2026-10-04 09:12:00",
+        "IP": "192.168.1.1",
+        "Reason": "After-hours activity"
+    },
+    {
+        "UserID": "m_taylor",
+        "Action": "ACCESS",
+        "Resource": "Finance_Server_NAS",
+        "Timestamp": "2026-10-04 03:45:12",
+        "IP": "192.168.1.110",
+        "Reason": "After-hours activity"
+    },
+    {
+        "UserID": "olga_k",
+        "Action": "LOGIN",
+        "Resource": "Portal",
+        "Timestamp": "2026-10-04 10:01:05",
+        "IP": "192.168.1.15",
+        "Reason": "After-hours activity"
+    }
+]

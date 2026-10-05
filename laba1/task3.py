@@ -15,8 +15,7 @@ except ImportError:
 
 
 class ValidationError(Exception):
-    """кастомний виняток для помилок валідації довжини пароля."""
-
+    """кастомний виняток для помилок валідації довжини пароля"""
 
 
 def generate_hash(
@@ -27,12 +26,12 @@ def generate_hash(
     if (
         not password or not salt
     ):  # перевірка на порожній пароль або сіль (вимога: згенерувати ValueError)
-        raise ValueError("Пароль та сіль не можуть бути порожніми!")
+        raise ValueError("Пароль та сіль не можуть бути порожніми")
 
     if (
         len(password) < 15
-    ):  # Перевірка на мінімальну довжину для Варіанта 7 (Вимога: згенерувати ValidationError)
-        raise ValidationError("Пароль коротший за мінімальну довжину (15 символів)!")
+    ):  # перевірка на мінімальну довжину для Варіанта 7 (Вимога: згенерувати ValidationError)
+        raise ValidationError("пароль коротший за мінімальну довжину (15 символів)")
 
     salted_password = password + salt  # об'єднання пароля та солі
 
@@ -87,7 +86,7 @@ def log_event(func):  # декоратор логування подій @log_ev
 
 # реєстр. корист та збереження в csv
 def create_user(username: str, password: str) -> tuple:
-    """створює кортеж (логін, хеш_пароля) для одного користувача."""
+    """створює кортеж (логін, хеш_пароля) для одного користувача"""
     hash_value = generate_hash(password)
     return (username, hash_value)
 
@@ -193,7 +192,13 @@ def main():
 
         print("\n події успішно відлоговано у файл laba1/data/log.json")
 
-    except (OSError, FileNotFoundError, PermissionError, ValidationError, ValueError) as e:
+    except (
+        OSError,
+        FileNotFoundError,
+        PermissionError,
+        ValidationError,
+        ValueError,
+    ) as e:
         print(f"перехоплено виняток: {e}")
 
 
