@@ -54,8 +54,8 @@ class User:
         test_hash = hashlib.pbkdf2_hmac(
             "sha256", password.encode("utf-8"), self.__password_salt, HASH_ITERATIONS
         )
-        # безпечне порівняння двох хешів для захисту від timing attacks
-        return hashlib.compare_digest(test_hash, self.__password_hash)
+        # безпечне порівняння двох хешів через поелементну перевірку
+        return len(test_hash) == len(self.__password_hash) and all(a == b for a, b in zip(test_hash, self.__password_hash))
 
     def deactivate(self):
         """метод для деактивації користувача"""

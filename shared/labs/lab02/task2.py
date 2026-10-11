@@ -146,9 +146,23 @@ if __name__ == "__main__":
     parser.add_argument(
         "--out-report", required=True, help="Path to output JSON report"
     )
+    #зміна 1 додаємо прапорець для перевірки позаробочого часу
+    parser.add_argument(
+        "--after-hours", action="store_true", help="Detect after-hours activity anomalies"
+    )
+    #зміна 2 додаємо необов'язковий аргумент для файлу логів виконання
+    parser.add_argument(
+        "--log-file", help="Path to custom log file"
+    )
+    
     args = parser.parse_args()
 
     analyzer = UserActivityAnalyzer(args.activity_log)
     analyzer.load_logs()
-    anomalies = analyzer.detect_after_hours()
-    analyzer.save_report(args.out_report, anomalies)
+    
+    #зміна 3 обробка логіки запуску відповідно до переданих аргументів
+    if args.after_hours:
+        anomalies = analyzer.detect_after_hours()
+        analyzer.save_report(args.out_report, anomalies)
+    else:
+        logger.info("No specific analysis flag provided. Use --after-hours.")

@@ -50,7 +50,7 @@ def run_task2():
         "Authorized",
         "Privileged",
         "Critical",
-    )  # перетворюємо цифри від 1 до 4 на зрозумілі текстові назви(Кортеж рівнів безпеки)
+    )  # перетворюємо цифри від 1 до 4 на зрозумілі текстові назви(кортеж рівнів безпеки)
     blocked_users = {
         "backup_service",
         "deactivated_svc",
@@ -60,7 +60,7 @@ def run_task2():
     print("рівні безпеки")  # вивід усіх ресур. із заміною чисел
     for res_name, level_num in resources:
         level_text = security_levels[level_num - 1]
-        print(f"Ресурс: {res_name:<23} | Рівень: {level_text}")
+        print(f"ресурс: {res_name:<23} | рівень: {level_text}")
 
     print("результат перевірки")
 
@@ -74,10 +74,10 @@ def run_task2():
             if (
                 username in blocked_users
             ):  # перевірка 1: користувач у списку заблокованих
-                print(f"user={username} resource={res_name} -> DENY (User is blocked)")
+                print(f"user={username} resource={res_name} -> DENY (user is blocked)")
 
             elif not user_info["active"]:  # перевірка 2: обліковий запис неактивний
-                print(f"user={username} resource={res_name} -> DENY (Account inactive)")
+                print(f"user={username} resource={res_name} -> DENY (account inactive)")
 
             elif (
                 user_info["clearance"] >= req_clearance
@@ -90,6 +90,6 @@ def run_task2():
                 )
 
 
-# точка входу для прямого запуску файлу
+
 if __name__ == "__main__":
     run_task2()
